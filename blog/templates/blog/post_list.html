@@ -2,27 +2,36 @@
     <head>
        <title>凡人修仙传（忘语著仙侠题材网络小说）_百度百科</title>
     </head>
-    <body background="http://ppt.downhot.com/d/file/p/2013/05/21/03720eceb5f89e394c1c088b4823dc0f.jpg" height = 100 weight = 100">
-       <img src="http://ppt.downhot.com/d/file/p/2013/05/21/03720eceb5f89e394c1c088b4823dc0f.jpg" height = 100 weight = 100 alt = '蓝色'>
+    <body background="http://fangyuan.shop.chuangyimao.com/uploads/shop/22/news/201411/141106035750b29fe498d3.jpg" height = 100 weight = 100">
+       <img src="http://fangyuan.shop.chuangyimao.com/uploads/shop/22/news/201411/141106035750b29fe498d3.jpg" height = 100 weight = 100 alt = '蓝色'>
        <div>
            <h1><a href = "">Django Girls Blog</a></h1>
        </div>
        <div>
            <p>published: 17.02.2017,12:14</p>
-           <h2><a href = "">My first post</a></h2>
+           <h1><a href = "">My first post</a></h1>
            <p>随便打的东西，看成一段乱码就好</p>
        </div>
        <div>
            <p>published: 17.02.2017, 12:14</p>
-           <h2><a href = ''>My second post</a></h2>
+           <h1><a href = ''>My second post</a></h1>
            <p>随便打的东西，看成另一段乱码就好，随便脑补吧</p>
            <ul>
                <li>first list</li>
                <li>second list</li>
            </ul>
        </div>
+       {% for post in posts %}
+            <div>
+                <p>published:{{ post.published_date }}</p>
+                <h1><a href=''>{{ post.title }}</a></h1>
+                <p>{{ post.text | linebreaksbr }}</p>
+            </div>
+       {% endfor %}
        <div>
+           <h1><a href="">qingdang</a> </h1>
            <dir>
+               <p>{{posts}}</p>
                <p>只说是清单试试段落能不能加入</p>
                <li>毕竟是清单还是加条条目吧</li>
            </dir>
@@ -42,7 +51,7 @@
     </body>
     <body>
         <p>再加一个body又会怎样？</p>
-        <table border=3 align="center" bgcolor="#f5f5dc" backgroung="http://img1.3lian.com/img2011/w1/105/21/d/51.jpg">
+        <table border=3 align="center" bgcolor="#f5f5dc" backgroung="http://fangyuan.shop.chuangyimao.com/uploads/shop/22/news/201411/141106035750b29fe498d3.jpg">
             <caption>据说是标题，加点什么好？</caption>
             <th>标题存储格表格第一列</th>
             <tr><td width=30 height=30 align=center valign=center></td></tr>
