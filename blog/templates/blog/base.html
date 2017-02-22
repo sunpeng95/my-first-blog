@@ -9,6 +9,9 @@
     </head>
     <body background="http://fangyuan.shop.chuangyimao.com/uploads/shop/22/news/201411/141106035750b29fe498d3.jpg" height = 100 weight = 100">
        <div class="page-header">
+       {% if user.is_authenticated %}
+           <a href="{% url 'post_new' %}" class="top_menu"><span class="glyphicon glyphicon-plus"></span></a>
+       {% endif %}
            <h1><a href = "">Lobster just work to Enjlish characters</a></h1>
        </div>
        <div class="content container">
